@@ -34,8 +34,9 @@ class Employee:
         first, last, pay = employee_string.split('-')
         return cls(first, last, pay)
     
-    # static methods dont take instance or class as an argument, so if instance or class is not being used, thats your cue
+    # static methods dont take instance or class as an argument, so if instance or class or instance is not being used, thats your cue
     # to use static method instead of class method
+    # they are also used as getters and setters for static variables also known as class variables
     @staticmethod
     def is_workday(day):
         if day.weekday() == 5 or day.weekday() == 6:
